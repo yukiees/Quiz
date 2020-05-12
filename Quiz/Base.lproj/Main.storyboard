@@ -28,7 +28,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Start!"/>
                                 <connections>
-                                    <segue destination="TEy-sc-lwz" kind="presentation" id="fy2-9p-LHg"/>
+                                    <action selector="toQuiz" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJy-Ee-CFR"/>
+                                    <segue destination="TEy-sc-lwz" kind="presentation" identifier="quiz" id="ucH-zh-W8Y"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="全問正解を目指して頑張って下さい！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-Zy-Nnd">
@@ -111,6 +112,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="c92-Y3-0A6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uld-Zf-S6e"/>
                     <connections>
                         <outlet property="answerBtn1" destination="LlH-Jh-d6U" id="O34-1L-lur"/>
                         <outlet property="answerBtn2" destination="2Ih-4w-CQl" id="RY8-r3-xXf"/>
@@ -134,12 +136,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIL-KE-RPu">
-                                <rect key="frame" x="20" y="355" width="374" height="81"/>
+                                <rect key="frame" x="20" y="207" width="374" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTd-ES-ufI">
+                                <rect key="frame" x="47" y="507" width="320" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="タイトルに戻る"/>
+                                <connections>
+                                    <action selector="toTopBtnAction:" destination="eyb-HW-2H1" eventType="touchUpInside" id="ppI-w5-jpN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6tg-kc-la7"/>
